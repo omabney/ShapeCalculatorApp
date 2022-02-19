@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DEFFFF"
+    android:padding="10sp"
+    tools:context=".Triangle">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/triangle"
+                android:textSize="30sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/triangle_sideA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:ems="10"
+        android:hint="@string/triangle_sideA"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="20sp"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/triangle_sideB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/triangle_sideA"
+        android:ems="10"
+        android:hint="@string/triangle_sideB"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="20sp"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/triangle_sideC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/triangle_sideB"
+        android:ems="10"
+        android:hint="@string/triangle_sideC"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="20sp"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/triangle_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/triangle_sideC"
+        android:ems="10"
+        android:hint="@string/triangle_height"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="20sp"
+        android:textSize="20dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20sp">
+
+        <Button
+            android:id="@+id/submit_area"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:text="Area"
+            app:layout_constraintEnd_toStartOf="@+id/submit_perimeter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/triangle_height"
+            tools:ignore="NotSibling" />
+
+        <Button
+            android:id="@+id/submit_perimeter"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Perimeter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/submit_area"
+            app:layout_constraintStart_toEndOf="@id/submit_area" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:textSize="30sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp" />
+
+
+</LinearLayout>
